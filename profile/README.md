@@ -1,6 +1,6 @@
 |   |   |
 |---|---|
-| **Privateer** (noun) _pri·​va·​teer ˌprī-və-ˈtir_ <br> : an armed private ship licensed to attack enemy shipping <br> **also** : a sailor on such a ship | <img src="profile/patches-small.png" height="300px"> |
+| **Privateer** (noun) _pri·​va·​teer ˌprī-və-ˈtir_ <br> : an armed private ship licensed to attack enemy shipping <br> **also** : a sailor on such a ship | <img src="profile/patches-small.png" width="175px" height="300px"> |
 
 # Privateer
 
