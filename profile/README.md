@@ -25,6 +25,7 @@ This project is currently maintained by the [FINOS](https://finos.org) Foundatio
 > Automated installers are expected to be feature complete in or before October 2024.
 
 ### Install Privateer, and ensure it is available in your local PATH.
+Please follow the [Installation Instructions](https://github.com/privateerproj/privateer?tab=readme-ov-file#build-privateer-from-source) listed in the privateer's repository.
 
 If installed correctly, the command `pvtr -h` will present you with all commands and flags that are available in your installed version.
 
