@@ -91,7 +91,7 @@ A pass/fail message and other essential runtime information will be printed to t
 
 ### Raid Generation
 
-Required values are `-p`/`--service-path` and `-n`/`--service-name`. 
+Required values are `-p`/`--service-path` and `-n`/`--service-name`.
 
 By default, the raid is generated from the [official template repo](https://github.com/privateerproj/raid-generator-templates). Optionally, you may customize the template directory and specify the local directory path using `--local-templates`.
 
@@ -100,6 +100,8 @@ The service path may be a local path or URL to a properly formatted Common Cloud
 The service name should be the abbreviated name, such as `-n GCS` for "Google Cloud Storage."
 
 The generated raid will be stored in the output directory: `-o`/`--output-path` (default `generated-raid/`).
+
+Example: `pvtr generate-raid -p ../demo/demo-control.yaml -n GCS -o .`
 
 ### Raid Customization
 
