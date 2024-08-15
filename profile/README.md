@@ -82,3 +82,86 @@ If your config file is named `my-config.yml`, you can run privateer as follows:
 `pvtr sally -c my-config.yml`
 
 A pass/fail message and other essential runtime information will be printed to the terminal. Execution details will be provided in your specified output directory.
+
+## Creating a new Raid
+
+> [!NOTE] Raid generation is currently only supported for Common Cloud Controls component definitions. Extending this is possible, but not currently planned.
+
+### Raid Generation
+
+Required values are `-p`/`--service-path` and `-n`/`--service-name`. 
+
+By default, the raid is generated from the [official template repo](https://github.com/privateerproj/raid-generator-templates). Optionally, you may customize the template directory and specify the local directory path using `--local-templates`.
+
+The service path may be a local path or URL to a properly formatted Common Cloud Controls component definition.
+
+The service name should be the abbreviated name, such as `-n GCS` for "Google Cloud Storage."
+
+The generated raid will be stored in the output directory: `-o`/`--output-path` (default `generated-raid/`).
+
+### Raid Customization
+
+A generated Raid will contain all of the boilerplate code necessary for it to act as a gRPC plugin. It will also be pre-populated with one tactic and "Strikes" corresponding to the controls in the component definition.
+
+Each Strike listed within the tactic is a function that will be called by Privateer when the Raid is executed.
+
+```go
+Armory.Tactics = map[string][]raidengine.Strike{
+		"CCC_OS_Security": {
+			Armory.CCC_OS_C1_TR01,
+			Armory.CCC_OS_C1_TR02,
+    }
+}
+```
+
+Strike functions will be named after the associated control. These functions will be pre-populated with the logic necessary for structured logs. Additional "movement" functions will be pre-populated, corresponding to each Test Requirement for the corresponding control.
+
+```go
+func (a *SVC) CCC_OS_C1_TR01() (strikeName string, result raidengine.StrikeResult) {
+	// set default return values
+	strikeName = "CCC_OS_C1_TR01"
+	result = raidengine.StrikeResult{
+		Passed:      false,
+		Description: "All supported network data protocols must be running on secure channels.",
+		Message:     "Strike has not yet started.", // This message will be overwritten by subsequent movements
+		DocsURL:     "https://maintainer.com/docs/raids/SVC",
+		ControlID:   "CCC-Taxonomy-1",
+		Movements:   make(map[string]raidengine.MovementResult),
+	}
+
+	CCC_OS_C1_TR01_T01_Result := CCC_OS_C1_TR01_T01()
+	result.Movements["CCC_OS_C1_TR01_T01"] = CCC_OS_C1_TR01_T01_Result
+	if !CCC_OS_C1_TR01_T01_Result.Passed {
+		result.Message = CCC_OS_C1_TR01_T01_Result.Message
+		return
+	}
+
+	// TODO: Additional movement calls go here
+
+	return
+}
+```
+
+The value `Passed` should be updated if all movements are successful. 
+
+It is advised to update the Strike `Message` value consistently, so that the log entry contains information about the last action performed.
+
+`DocsURL` is optional, but recommended for complex Strikes. This should contain a link to the code, documentation, or other helpful information for users to understand this Strike.
+
+A strike may contain as many Movements as you like. Generated Movements look like this:
+
+```go
+func CCC_OS_C1_TR02_T01() (result raidengine.MovementResult) {
+	result = raidengine.MovementResult{
+		Description: "JokerName must be found in the runtime configuration.",
+		Function:    utils.CallerPath(0),
+	}
+	
+	// TODO: Movement logic goes here
+	return
+}
+```
+
+The Movement `Description` should contain information about why that Movement succeeded or failed. Any Movement failure will result in the failure of the Strike and, subsequently, the Raid.
+
+Movement logic may be self-contained, or call out to other helper functions. This is where you as a Raid developer will do most of your work.
