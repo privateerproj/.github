@@ -85,7 +85,8 @@ A pass/fail message and other essential runtime information will be printed to t
 
 ## Creating a new Raid
 
-> [!NOTE] Raid generation is currently only supported for Common Cloud Controls component definitions. Extending this is possible, but not currently planned.
+> [!NOTE]
+> Raid generation is currently only supported for Common Cloud Controls component definitions. Extending this is possible, but not currently planned.
 
 ### Raid Generation
 
