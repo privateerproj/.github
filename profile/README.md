@@ -1,7 +1,3 @@
-|   |   |
-|---|---|
-| **Privateer** (noun) _pri·​va·​teer ˌprī-və-ˈtir_ <br> : an armed private ship licensed to attack enemy shipping <br> **also** : a sailor on such a ship | <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.png" alt="Patches the Privateer Pointer" style="max-height: 200px;"> |
-
 # Privateer Project
 
 Privateer is a runtime behavior testing framework designed for security and compliance validation in infrastructure environments. Instead of prescribing specific actions or analyzing static configurations, Privateer actively tests your deployed infrastructure by simulating real-world usage from both typical and malicious users. This approach ensures that only expected behaviors are possible, helping to identify vulnerabilities and misconfigurations that other methods might overlook.
@@ -29,3 +25,7 @@ Privateer is built with infrastructure engineers in mind. If you need to validat
 Avast, it’s time to weigh anchor!
 
 Whether you're looking to deploy existing Raids or embark on crafting new ones, Privateer stands ready to elevate your resource validation journey.
+
+|   |   |
+|---|---|
+| **Privateer** (noun) _pri·​va·​teer ˌprī-və-ˈtir_ <br> : an armed private ship licensed to attack enemy shipping <br> **also** : a sailor on such a ship | <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.png" alt="Patches the Privateer Pointer" style="max-height: 200px;"> |
