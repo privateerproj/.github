@@ -10,10 +10,10 @@ By employing Privateer's runtime behavior testing, organizations can more effect
 
 - **Privateer** is an executable test harness that calls plugins based on the user's configuration.
 - **Privateer SDK** is a set of logic and tools used to establish an efficient, secure, and cohesive collaboration between Privateer and its Raids. The SDK guides and enables plugins, independent of each other, to behave in a unified fashion, creating common standards and practices within separate integrations.
-- **Raids** are plugins responsible for executing validation tests and returning results to Privateer. Raids can have multiple Tactics.
+- **Raids** are plugins responsible for executing validation tests and returning results to Privateer. Raids are composed of multiple strikes, which are organized into Tactics.
   - **Tactics** are plans created and organized from requirements within Raids. They are evaluated based on different security and regulatory policies. Each Tactic is created from Raids and will have a related set of Strikes.
-  - **Strikes** are complex functions that attempt to validate a specific control or policy. Each Tactic will have a set of Strikes.
-  - **Movements** allow small sets of logic to be executed sequentially within a single Strike, with an independent log entry for each step.
+  - **Strikes** are complex functions that attempt to validate a specific control or policy. Each Strike will have one or more movements.
+  - **Movements** allow small sets of logic to be executed sequentially within a single Strike, with an independent log entry for each.
 
 ### Enhance Infrastructure Validation
 
