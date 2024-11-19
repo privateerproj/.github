@@ -8,6 +8,10 @@ By employing Privateer's runtime behavior testing, organizations can more effect
 
 ## Key Concepts
 
+| Privaeer Core | Privateer SDK | Raid | Tactic | Strike | Movement |
+|---|---|---|---|---|---|
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.png" alt="Patches the Privateer Pointer" width="100" height="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/sdk.svg" alt="SDK" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/raid.svg" alt="Raid" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/tactic.svg" alt="Tactic" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/strike.svg" alt="Strike" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/movement.svg" alt="Movement" width="100"> |
+
 - **Privateer** is an executable test harness that calls plugins based on the user's configuration.
 - **Privateer SDK** is a set of logic and tools used to establish an efficient, secure, and cohesive collaboration between Privateer and its Raids. The SDK guides and enables plugins, independent of each other, to behave in a unified fashion, creating common standards and practices within separate integrations.
 - **Raids** are plugins responsible for executing validation tests and returning results to Privateer. Raids are composed of multiple strikes, which are organized into Tactics.
@@ -25,4 +29,4 @@ Whether you're looking to deploy existing Raids or embark on crafting new ones, 
 
 |   |   |
 |---|---|
-| **Privateer** (noun) _pri·​va·​teer ˌprī-və-ˈtir_ <br> : an armed private ship licensed to attack enemy shipping <br> **also** : a sailor on such a ship | <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.png" alt="Patches the Privateer Pointer" style="max-height: 200px;"> |
+| **Privateer** (noun) _pri·​va·​teer ˌprī-və-ˈtir_ <br> : an armed private ship licensed to attack enemy shipping <br> **also** : a sailor on such a ship | <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.png" alt="Patches the Privateer Pointer" width="250" height="250"> |
