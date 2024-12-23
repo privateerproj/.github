@@ -8,16 +8,16 @@ By employing Privateer's runtime behavior testing, organizations can more effect
 
 ## Key Concepts
 
-| Privaeer Core | Privateer SDK | Raid | Tactic | Strike | Movement |
+| Privateer Core | Privateer SDK | Plugin | Test Suite | Test Set | Test |
 |---|---|---|---|---|---|
-| <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.png" alt="Patches the Privateer Pointer" width="100" height="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/sdk.svg" alt="SDK" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/raid.svg" alt="Raid" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/tactic.svg" alt="Tactic" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/strike.svg" alt="Strike" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/movement.svg" alt="Movement" width="100"> |
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.png" alt="Patches the Privateer Pointer" width="100" height="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/sdk.svg" alt="SDK" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/plugin.svg" alt="Plugin" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/testSuite.svg" alt="Test Suite" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/testSet.svg" alt="Test Set" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/test.svg" alt="Test" width="100"> |
 
 - **Privateer** is an executable test harness that calls plugins based on the user's configuration.
-- **Privateer SDK** is a set of logic and tools used to establish an efficient, secure, and cohesive collaboration between Privateer and its Raids. The SDK guides and enables plugins, independent of each other, to behave in a unified fashion, creating common standards and practices within separate integrations.
-- **Raids** are plugins responsible for executing validation tests and returning results to Privateer. Raids are composed of multiple strikes, which are organized into Tactics.
-  - **Tactics** are plans created and organized from requirements within Raids. They are evaluated based on different security and regulatory policies. Each Tactic is created from Raids and will have a related set of Strikes.
-  - **Strikes** are complex functions that attempt to validate a specific control or policy. Each Strike will have one or more movements.
-  - **Movements** allow small sets of logic to be executed sequentially within a single Strike, with an independent log entry for each.
+- **Privateer SDK** is a set of logic and tools used to establish an efficient, secure, and cohesive collaboration between Privateer and its Plugins. The SDK guides and enables plugins, independent of each other, to behave in a unified fashion, creating common standards and practices within separate integrations.
+- **Plugins** are plugins responsible for executing validation tests and returning results to Privateer. Plugins are composed of multiple strikes, which are organized into Test Suites.
+  - **Test Suites** are plans created and organized from requirements within Plugins. They are evaluated based on different security and regulatory policies. Each Test Suite is created from Plugins and will have a related set of Test Sets.
+  - **Test Sets** are complex functions that attempt to validate a specific control or policy. Each Test Set will have one or more movements.
+  - **Tests** allow small sets of logic to be executed sequentially within a single Test Set, with an independent log entry for each.
 
 ### Enhance Infrastructure Validation
 
@@ -25,7 +25,7 @@ Privateer is built with infrastructure engineers in mind. If you need to validat
 
 Avast, it’s time to weigh anchor!
 
-Whether you're looking to deploy existing Raids or embark on crafting new ones, Privateer stands ready to elevate your resource validation journey.
+Whether you're looking to deploy existing Plugins or embark on crafting new ones, Privateer stands ready to elevate your resource validation journey.
 
 |   |   |
 |---|---|
