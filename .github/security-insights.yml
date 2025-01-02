@@ -15,8 +15,8 @@ project:
       social: https://bsky.app/profile/eddieknight.dev
       primary: true
   documentation:
-    quickstart-guide: https://github.com/privateerproj
-    detailed-guide: https://github.com/privateerproj/privateer/README.md
+    quickstart-guide: https://github.com/privateerproj/privateer/blob/main/README.md
+    detailed-guide: https://github.com/privateerproj/privateer/blob/main/README.md
     code-of-conduct: https://github.com/privateerproj/.github/blob/main/.github/CODE_OF_CONDUCT.md
   repositories:
     - name: Privateer
