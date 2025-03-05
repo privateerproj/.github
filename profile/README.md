@@ -8,24 +8,19 @@ By employing Privateer's runtime behavior testing, organizations can more effect
 
 ## Key Concepts
 
-| Privateer Core | Privateer SDK | Plugin | Test Suite | Test Set | Test |
+| Privateer Core | Privateer SDK | Plugin | EvaluationSuite | ControlEvaluation | Assessment |
 |---|---|---|---|---|---|
 | <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.png" alt="Patches the Privateer Pointer" width="100" height="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/sdk.svg" alt="SDK" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/plugin.svg" alt="Plugin" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/testSuite.svg" alt="Test Suite" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/testSet.svg" alt="Test Set" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/test.svg" alt="Test" width="100"> |
 
 - **Privateer** is an executable test harness that calls plugins based on the user's configuration.
 - **Privateer SDK** is a set of logic and tools used to establish an efficient, secure, and cohesive collaboration between Privateer and its Plugins. The SDK guides and enables plugins, independent of each other, to behave in a unified fashion, creating common standards and practices within separate integrations.
-- **Plugins** are plugins responsible for executing validation tests and returning results to Privateer. Plugins are composed of multiple strikes, which are organized into Test Suites.
-  - **Test Suites** are plans created and organized from requirements within Plugins. They are evaluated based on different security and regulatory policies. Each Test Suite is created from Plugins and will have a related set of Test Sets.
-  - **Test Sets** are complex functions that attempt to validate a specific control or policy. Each Test Set will have one or more movements.
-  - **Tests** allow small sets of logic to be executed sequentially within a single Test Set, with an independent log entry for each.
+- **Plugins** are plugins responsible for executing validation tests and returning results to Privateer. Plugins are composed of one or more `EvaluationSuite`, which are intended to map to control catalogs. This follows the "Simplified Compliance Infrastructure" model and uses SCI Layer 4 data types.
 
 ### Enhance Infrastructure Validation
 
 Privateer is built with infrastructure engineers in mind. If you need to validate your resources against security or compliance standards, Privateer can help. The user-friendly command line interface and powerful features simplify the complexities of validation.
 
 Avast, it’s time to weigh anchor!
-
-Whether you're looking to deploy existing Plugins or embark on crafting new ones, Privateer stands ready to elevate your resource validation journey.
 
 |   |   |
 |---|---|
