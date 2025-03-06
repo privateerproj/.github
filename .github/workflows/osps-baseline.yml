@@ -1,6 +1,6 @@
 name: OSPS Baseline Scan
 
-on: [pull_request]
+on: [workflow_dispatch]
 
 jobs:
   scan:
@@ -10,14 +10,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Pull the Docker image
+      - name: Pull the pvtr-github-repo image
         run: docker pull eddieknight/pvtr-github-repo:latest
 
-      - name: Replace token in config file
+      - name: Add GitHub Secret to config file so it is protected in outputs
         run: |
           sed -i 's/{{ TOKEN }}/${{ secrets.TOKEN }}/g' ${{ github.workspace }}/.github/pvtr-config.yml
 
-      - name: Run the container with file and directory mounts
+      - name: Scan all repos specified in .github/pvtr-config.yml
         run: |
           docker run --rm \
             -v ${{ github.workspace }}/.github/pvtr-config.yml:/.privateer/config.yml \
