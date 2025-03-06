@@ -7,7 +7,7 @@ policy:
   applicability:
     - Maturity Level 1
 
-write-directory: evaluation_output
+write-directory: evaluation_results
 services:
   privateer:
     plugin: github-repo
