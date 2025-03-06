@@ -1,6 +1,6 @@
 name: OSPS Baseline Scan
 
-on: [workflow_dispatch]
+on: [pull_request]
 
 jobs:
   scan:
