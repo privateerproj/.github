@@ -13,9 +13,13 @@ jobs:
       - name: Pull the Docker image
         run: docker pull eddieknight/pvtr-github-repo:latest
 
+      - name: Replace token in config file
+        run: |
+          sed -i 's/{{ TOKEN }}/${{ secrets.GITHUB_TOKEN }}/g' ${{ github.workspace }}/.github/pvtr-config.yml
+
       - name: Run the container with file and directory mounts
         run: |
           docker run --rm \
-            -v ${{ github.workspace }}/config.yml:/.privateer/config.yml \
+            -v ${{ github.workspace }}/.github/pvtr-config.yml:/.privateer/config.yml \
             -v ${{ github.workspace }}/docker_output:/evaluation_results \
             eddieknight/pvtr-github-repo:latest

@@ -1,0 +1,22 @@
+vars:
+  token: {{ TOKEN }} # repo, admin:org
+
+policy:
+  catalogs:
+    - OSPS_B
+  applicability:
+    - Maturity Level 1
+
+write-directory: evaluation_output
+services:
+  privateer:
+    plugin: github-repo
+    vars:
+      owner: privateerproj
+      repo: privateer
+  privateer-sdk:
+    plugin: github-repo
+    vars:
+      owner: privateerproj
+      repo: privateer-sdk
+
