@@ -15,7 +15,7 @@ jobs:
 
       - name: Replace token in config file
         run: |
-          sed -i 's/{{ TOKEN }}/${{ secrets.GITHUB_TOKEN }}/g' ${{ github.workspace }}/.github/pvtr-config.yml
+          sed -i 's/{{ TOKEN }}/${{ secrets.TOKEN }}/g' ${{ github.workspace }}/.github/pvtr-config.yml
 
       - name: Run the container with file and directory mounts
         run: |
