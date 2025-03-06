@@ -1,5 +1,6 @@
 vars:
   token: {{ TOKEN }} # repo, admin:org
+  owner: privateerproj
 
 policy:
   catalogs:
@@ -12,11 +13,9 @@ services:
   privateer:
     plugin: github-repo
     vars:
-      owner: privateerproj
       repo: privateer
   privateer-sdk:
     plugin: github-repo
     vars:
-      owner: privateerproj
       repo: privateer-sdk
 
