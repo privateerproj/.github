@@ -1,0 +1,21 @@
+name: OSPS Baseline Scan
+
+on: [workflow_dispatch]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Pull the Docker image
+        run: docker pull eddieknight/pvtr-github-repo:latest
+
+      - name: Run the container with file and directory mounts
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}/config.yml:/.privateer/config.yml \
+            -v ${{ github.workspace }}/docker_output:/evaluation_results \
+            eddieknight/pvtr-github-repo:latest
