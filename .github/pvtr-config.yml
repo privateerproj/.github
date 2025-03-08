@@ -1,5 +1,5 @@
 vars:
-  token: {{ TOKEN }} # repo, admin:org
+  token: {{ TOKEN }} # GH classic token with all repo: read permissions
   owner: privateerproj
 
 policy:
