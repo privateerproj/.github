@@ -8,7 +8,11 @@ Privateer currently only supports non-production use cases. But in spite of that
 
 ## Supported Versions
 
-Until the official v1 release, we will not support any versions prior to the latest minor version. For example, we will add security patches to v0.3 until v0.4 is released. This documentation will be updated with the release of v1.
+We do not extend assurances or updates for any versions prior to the latest minor version. We will add security updates as semver "patch" releases only for the highest minor version. 
+
+For example, updates will be added to `v1.3` only until `v1.4` is released. If a security update was added in `v1.3.1`, then `v1.4.0` is released, any defects found will be fixed in `v1.4.1` and there will not be a `v1.3.2`.
+
+In the event that a new major version is released, we will revisit this documentation to update accordingly.
 
 ## Reporting a Vulnerability
 
