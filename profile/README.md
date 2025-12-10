@@ -6,11 +6,11 @@ Privateer orchestrates plugin-based tests and provides consistent output accordi
 
 ||||
 |---|---|---|
-| <img src="https://github.com/privateerproj/.github/blob/main/profile/anvil.svg" alt="SDK" width="100"> | Privateer SDK | provides common logic for Privateer and Plugins |
-| <img src="https://github.com/privateerproj/.github/blob/main/profile/ship.png" alt="Patches the Privateer Pointer" width="100" height="100"> | Privateer Core | the main executable that runs plugins based on user configuration |
-| <img src="https://github.com/privateerproj/.github/blob/main/profile/map.svg" alt="Plugin" width="100"> | Plugin | execute validation tests and return results to Privateer |
-| <img src="https://github.com/privateerproj/.github/blob/main/profile/cannon.svg" alt="Test Suite" width="100"> | EvaluationSuite | a set of related data allowing control IDs and their requirements to be mapped to one or more assessment steps |
-| <img src="https://github.com/privateerproj/.github/blob/main/profile/match.svg" alt="Test Set" width="100"> | AssessmentStep | a specialized function which will analyze a data payload provided at runtime |
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/anvil.svg" alt="anvil" width="100"> | Privateer SDK | provides common logic for Privateer and Plugins |
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/ship.png" alt="ship" width="100" height="100"> | Privateer Core | the main executable that runs plugins based on user configuration |
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/map.svg" alt="map" width="100"> | Plugin | execute validation tests and return results to Privateer |
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/cannon.svg" alt="cannon" width="100"> | EvaluationSuite | a set of related data allowing control IDs and their requirements to be mapped to one or more assessment steps |
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/match.svg" alt="match" width="100"> | AssessmentStep | a specialized function which will analyze a data payload provided at runtime |
 
 |   |   |
 |---|---|
