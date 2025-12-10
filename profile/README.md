@@ -1,26 +1,16 @@
 # Privateer Project
 
-Privateer is a runtime behavior testing framework designed for security and compliance validation in infrastructure environments. Instead of prescribing specific actions or analyzing static configurations, Privateer actively tests your deployed infrastructure by simulating real-world usage from both typical and malicious users. This approach ensures that only expected behaviors are possible, helping to identify vulnerabilities and misconfigurations that other methods might overlook.
+Privateer actively interacts with your deployed systems to verify they behave as expected. It tests from both normal user and attacker perspectives to identify security vulnerabilities and misconfigurations that static analysis might miss.
 
-Intended for use in pre-production environments, Privateer verifies that your infrastructure is correctly configured before deployment. Its plugin-based architecture allows for harmonized inputs and outputs, enabling you to validate all specified resources using a single input—no matter how complex your architecture is. This unified approach streamlines the validation process and enhances efficiency.
+Privateer orchestrates plugin-based tests and provides consistent output according to the [Gemara](https://gemara.openssf.org) specification. This structure allows any number of resources to be subject to any number of assessment requirements.
 
-By employing Privateer's runtime behavior testing, organizations can more effectively ensure security and compliance, reducing risks associated with deploying in complex environments.
-
-## Key Concepts
-
-| Privateer Core | Privateer SDK | Plugin | EvaluationSuite | ControlEvaluation | Assessment |
-|---|---|---|---|---|---|
-| <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.png" alt="Patches the Privateer Pointer" width="100" height="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/sdk.svg" alt="SDK" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/plugin.svg" alt="Plugin" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/testSuite.svg" alt="Test Suite" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/testSet.svg" alt="Test Set" width="100"> | <img src="https://github.com/privateerproj/.github/blob/main/profile/test.svg" alt="Test" width="100"> |
-
-- **Privateer** is an executable test harness that calls plugins based on the user's configuration.
-- **Privateer SDK** is a set of logic and tools used to establish an efficient, secure, and cohesive collaboration between Privateer and its Plugins. The SDK guides and enables plugins, independent of each other, to behave in a unified fashion, creating common standards and practices within separate integrations.
-- **Plugins** are plugins responsible for executing validation tests and returning results to Privateer. Plugins are composed of one or more `EvaluationSuite`, which are intended to map to control catalogs. This follows the "Simplified Compliance Infrastructure" model and uses SCI Layer 4 data types.
-
-### Enhance Infrastructure Validation
-
-Privateer is built with infrastructure engineers in mind. If you need to validate your resources against security or compliance standards, Privateer can help. The user-friendly command line interface and powerful features simplify the complexities of validation.
-
-Avast, it’s time to weigh anchor!
+||||
+|---|---|---|
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/anvil.svg" alt="anvil" width="100"> | Privateer SDK | provides common logic for Privateer and Plugins |
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/ship.png" alt="ship" width="100" height="100"> | Privateer Core | the main executable that runs plugins based on user configuration |
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/map.svg" alt="map" width="100"> | Plugin | execute validation tests and return results to Privateer |
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/cannon.svg" alt="cannon" width="100"> | EvaluationSuite | a set of related data allowing control IDs and their requirements to be mapped to one or more assessment steps |
+| <img src="https://github.com/privateerproj/.github/blob/main/profile/match.svg" alt="match" width="100"> | AssessmentStep | a specialized function which will analyze a data payload provided at runtime |
 
 |   |   |
 |---|---|
