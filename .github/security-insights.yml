@@ -28,16 +28,6 @@ project:
       comment: |
         The Privateer SDK is a collection of tools and libraries to help developers create plugins for Privateer,
         and enables those plugins to be called from Privateer.
-    - name: Plugin Generator Templates
-      url: https://github.com/privateerproj/plugin-generator-templates
-      comment: |
-        The Plugin Generator Templates are a set of templates that can be used to create new plugins for Privateer.
-        These are used by Privateer's generate-plugin command to create the boilerplate code for a new plugin.
-    - name: Plugin Example
-      url: https://github.com/privateerproj/plugin-example
-      comment: |
-        The Plugin Example is a simple example plugin that demonstrates how to create a plugin for Privateer.
-        It is for use as a reference for developers creating their own plugins.
   vulnerability-reporting:
     reports-accepted: true
     bug-bounty-available: false
