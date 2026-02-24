@@ -13,6 +13,7 @@ jobs:
 
     permissions:
       contents: read
+      id-token: write # Required for octo-sts OIDC token exchange
       security-events: write # Required for SARIF upload
 
     steps:
@@ -21,12 +22,18 @@ jobs:
         with:
           persist-credentials: false
 
+      - uses: octo-sts/action@f603d3be9d8dd9871a265776e625a27b00effe05
+        id: octo-sts
+        with:
+          scope: privateerproj/.github
+          identity: .github
+
       - name: Open Source Project Security Baseline Scanner
         uses: revanite-io/osps-baseline-action@6d2d044b2ec5299d4d8b82da3027c7f5ddadda6e
         with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ steps.octo-sts.outputs.token }}
           catalog: "osps-baseline"
           upload-sarif: "true"
 
