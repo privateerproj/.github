@@ -1,0 +1,16 @@
+# VS Code
+.vscode
+__debug_bin
+
+# IntelliJ
+.idea
+
+# OS
+.DS_Store
+dist/
+
+# AI
+.claude/
+
+# logs
+logs/

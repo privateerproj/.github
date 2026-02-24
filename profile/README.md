@@ -14,4 +14,4 @@ Privateer orchestrates plugin-based tests and provides consistent output accordi
 
 |   |   |
 |---|---|
-| **Privateer** (noun) _pri·​va·​teer ˌprī-və-ˈtir_ <br> : an armed private ship licensed to attack enemy shipping <br> **also** : a sailor on such a ship | <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.png" alt="Patches the Privateer Pointer" width="250" height="250"> |
+| **Privateer** (noun) _pri·​va·​teer ˌprī-və-ˈtir_ <br> : an armed private ship licensed to attack enemy shipping <br> **also** : a sailor on such a ship | <img src="https://github.com/privateerproj/.github/blob/main/profile/patches-small.svg" alt="Patches the Privateer Pointer" width="250" height="250"> |
