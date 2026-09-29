@@ -15,12 +15,12 @@ project:
       social: https://bsky.app/profile/eddieknight.dev
       primary: true
   documentation:
-    quickstart-guide: https://github.com/privateerproj/privateer/blob/main/README.md
-    detailed-guide: https://github.com/privateerproj/privateer/blob/main/README.md
+    quickstart-guide: https://github.com/privateerproj/pvtr/blob/main/README.md
+    detailed-guide: https://github.com/privateerproj/pvtr/blob/main/README.md
     code-of-conduct: https://github.com/privateerproj/.github/blob/main/.github/CODE_OF_CONDUCT.md
   repositories:
     - name: Privateer
-      url: https://github.com/privateerproj/privateer
+      url: https://github.com/privateerproj/pvtr
       comment: |
         Privateer is the core executable that orchestrates community-built plugins.
     - name: Privateer SDK
