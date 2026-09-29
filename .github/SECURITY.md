@@ -24,7 +24,7 @@ If you find a security-related bug in Privateer, we kindly ask you for
 responsible disclosure to give us appropriate time to recieve, analyze and
 develop a fix to mitigate the found security vulnerability.
 
-- [Submit Vulnerability Report for Privateer Core](https://github.com/privateerproj/privateer/security)
+- [Submit Vulnerability Report for Privateer Core](https://github.com/privateerproj/pvtr/security)
 - [Submit Vulnerability Report for Privateer SDK](https://github.com/privateerproj/privateer-sdk/security)
 
 ## Review Known Vulnerabilities
@@ -32,7 +32,7 @@ develop a fix to mitigate the found security vulnerability.
 We will publish security advisories using the GitHub Security Advisories feature for each
 repository to keep our community well-informed, and will credit the reporter (if desired).
 
-- [View Advisories for Privateer Core](https://github.com/privateerproj/privateer/security/advisories)
+- [View Advisories for Privateer Core](https://github.com/privateerproj/pvtr/security/advisories)
 - [View Advisories for Privateer SDK](https://github.com/privateerproj/privateer-sdk/security/advisories)
 
 We will do our best to react quickly on your inquiry, and to coordinate a fix
