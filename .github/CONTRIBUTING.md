@@ -5,6 +5,8 @@ email, or any other method with the owners of this repository before making a ch
 
 Please note we have a [code of conduct](CODE_OF_CONDUCT.md); please follow it in all your interactions with the project.
 
+All changes follow the project's [secure development practices](SECURITY.md#secure-development). Report security vulnerabilities privately as described in [SECURITY.md](SECURITY.md), never in a public issue.
+
 ## Pull Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a
