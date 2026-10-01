@@ -28,6 +28,10 @@ project:
       comment: |
         The Privateer SDK is a collection of tools and libraries to help developers create plugins for Privateer,
         and enables those plugins to be called from Privateer.
+    - name: Privateer Homebrew Tap
+      url: https://github.com/privateerproj/homebrew-tap
+      comment: |
+        The Homebrew tap that distributes the pvtr CLI.
   vulnerability-reporting:
     reports-accepted: true
     bug-bounty-available: false
