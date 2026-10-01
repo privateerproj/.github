@@ -61,6 +61,8 @@ practices:
   pull request title validation.
 - GitHub Actions workflows pin every third-party action and reusable workflow to
   a full commit SHA.
+- Every workflow job that runs its own steps starts with
+  `step-security/harden-runner` in audit mode.
 - Dependabot opens weekly update pull requests for Go modules and GitHub Actions.
 - A weekly [OSPS Baseline](https://baseline.openssf.org) scan runs and uploads
   its results to code scanning.
@@ -69,8 +71,6 @@ practices:
 
 Where the repositories differ:
 
-- **Privateer Core** runs `step-security/harden-runner` in its workflows. The SDK
-  does not yet.
 - **Privateer Core** requires integration tests and Go and Markdown linting.
   The SDK requires a Go lint check.
 - **Privateer Core** also uses Dependabot for Docker images.
