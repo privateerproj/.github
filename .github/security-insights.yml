@@ -32,6 +32,18 @@ project:
       url: https://github.com/privateerproj/homebrew-tap
       comment: |
         The Homebrew tap that distributes the pvtr CLI.
+    - name: Privateer Website
+      url: https://github.com/privateerproj/site
+      comment: |
+        Source for the privateerproj.com website.
+    - name: Privateer Plugin Example
+      url: https://github.com/privateerproj/plugin-example
+      comment: |
+        A boilerplate plugin that shows the quickest way to build a Privateer plugin.
+    - name: Privateer Plugin Generator Templates
+      url: https://github.com/privateerproj/plugin-generator-templates
+      comment: |
+        Templates that `pvtr generate-plugin` uses to generate a new plugin from a Gemara control catalog.
   vulnerability-reporting:
     reports-accepted: true
     bug-bounty-available: false
