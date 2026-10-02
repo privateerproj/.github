@@ -1,6 +1,6 @@
 # Security Policy for Privateer
 
-Version: **v0.3 (2026-10-01)**
+Version: **v0.4 (2026-10-02)**
 
 ## Preface
 
@@ -8,6 +8,13 @@ Privateer currently only supports non-production use cases, but the Privateer Pr
 
 The project uses a weekly run of the [OSPS Baseline Scanner](https://github.com/revanite-io/osps-baseline-action)
 to ensure conformance with Level 1 of the [Open Source Project Security Baseline](https://baseline.openssf.org).
+
+## Scope
+
+This policy covers [Privateer Core](https://github.com/privateerproj/pvtr),
+the [Privateer SDK](https://github.com/privateerproj/privateer-sdk), and their
+release artifacts and GitHub Actions workflows. Plugins built by third parties
+with the SDK follow their own security policies.
 
 ## Supported Versions
 
@@ -27,10 +34,18 @@ develop a fix to mitigate the found security vulnerability.
 - [Submit Vulnerability Report for Privateer Core](https://github.com/privateerproj/pvtr/security)
 - [Submit Vulnerability Report for Privateer SDK](https://github.com/privateerproj/privateer-sdk/security)
 
+## What Counts as a Vulnerability
+
+Report it privately if Privateer or the SDK could execute untrusted code, leak
+credentials or tokens passed to plugins, write outside its intended paths, or
+ship a tampered release. Incorrect evaluation results from a plugin are bugs.
+Report them in that plugin's repository.
+
 ## Review Known Vulnerabilities
 
 We will publish security advisories using the GitHub Security Advisories feature for each
 repository to keep our community well-informed, and will credit the reporter (if desired).
+Published advisories also appear in the GitHub Advisory Database, which feeds OSV.
 
 - [View Advisories for Privateer Core](https://github.com/privateerproj/pvtr/security/advisories)
 - [View Advisories for Privateer SDK](https://github.com/privateerproj/privateer-sdk/security/advisories)
