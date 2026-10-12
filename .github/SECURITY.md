@@ -1,10 +1,12 @@
 # Security Policy for Privateer
 
-Version: **v0.4 (2026-10-02)**
+Version: **v0.5 (2026-10-12)**
 
 ## Preface
 
 Privateer currently only supports non-production use cases, but the Privateer Project team places high value on security considerations and welcomes input.
+
+We do not anticipate this project being used in commercial products. See [LF-Supported Projects and CRA Readiness](https://openssf.org/wp-content/uploads/2026/09/LF-Supported-Projects-and-CRA-Readiness-2026-09-10.pdf) for more information.
 
 The project uses a weekly run of the [OSPS Baseline Scanner](https://github.com/revanite-io/osps-baseline-action)
 to ensure conformance with Level 1 of the [Open Source Project Security Baseline](https://baseline.openssf.org).
