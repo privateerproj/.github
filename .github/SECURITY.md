@@ -1,6 +1,6 @@
 # Security Policy for Privateer
 
-Version: **v0.5 (2026-10-12)**
+Version: **v0.6 (2026-10-12)**
 
 ## Preface
 
@@ -77,12 +77,23 @@ practices:
 - Pull requests must pass required status checks before merge, including CI and
   pull request title validation.
 - GitHub Actions workflows pin every third-party action and reusable workflow to
-  a full commit SHA.
+  a full commit SHA. The one exception is the grc.store publish workflow
+  (`revanite-io/pvtr-publish-results`), called by its `v1` tag because grc.store
+  checks that tag in the signing certificate.
+- GitHub secret scanning and push protection are enabled.
+- Two workflows run on `pull_request_target`, which gives them a token with
+  write access: `auto-labeler` labels pull requests from forks, and `release`
+  runs when a pull request merges. Neither checks out or runs pull request code.
+  The labeler reads only pull request metadata. The release workflow exits
+  unless the pull request merged, then checks out `main` or the new release tag.
+  The pull request title check runs on `pull_request` with a read-only token.
 - Every workflow job that runs its own steps starts with
   `step-security/harden-runner` in audit mode.
 - Dependabot opens weekly update pull requests for Go modules and GitHub Actions.
 - A weekly [OSPS Baseline](https://baseline.openssf.org) scan runs and uploads
-  its results to code scanning.
+  its results to code scanning. A second weekly scan publishes signed results to
+  grc.store ([Core](https://grc.store/targets/privateer/pvtr),
+  [SDK](https://grc.store/targets/privateer/privateer-sdk)).
 - Each repository publishes a threat assessment in Gemara threat catalog format
   (see [Risk Handling](#risk-handling)).
 
